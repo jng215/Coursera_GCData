@@ -7,10 +7,7 @@ library(sqldf)
 library(dplyr)
 library(plyr)
 
-# set working directory
-setwd("c:/r64/ds3_gcdata/project/")
-
-# download and import data 
+# download file
 fileName <- "getdata_dataset.zip"
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", fileName)
 unzip(fileName) 
@@ -80,7 +77,7 @@ names(dataMeanStd) <- gsub("Mag", "Magnitude", names(dataMeanStd))
 
 numVariables <- length(dataMeanStd)-3    # number of variables, deducted Subject, Activity, ActivityDesc
 dataAverages <- ddply(dataMeanStd, .(Subject, Activity), function(x) colMeans(x[, 1:numVariables]))     ###
-write.table(dataAverages, "tidyAverageData.txt", row.name=FALSE)     
+write.table(dataAverages, "tidyAverageData.txt", row.name=FALSE)   
 
 
 
