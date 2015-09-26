@@ -2,7 +2,7 @@
 # Coursera - Getting and Cleaning Data - Course Project
 # -----------------------------------------------------
 
-# packages and set working directory
+# library packages
 library(sqldf)
 library(dplyr)
 library(plyr)
