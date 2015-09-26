@@ -10,7 +10,7 @@ library(plyr)
 # set working directory
 setwd("c:/r64/ds3_gcdata/project/")
 
-# download file 
+# download and import data 
 fileName <- "getdata_dataset.zip"
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", fileName)
 unzip(fileName) 
@@ -22,12 +22,10 @@ impdataActivityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt", hea
 impdataXTrain <- read.table("./UCI HAR Dataset/train/X_train.txt", header=FALSE)
 impdataYTrain <- read.table("./UCI HAR Dataset/train/y_train.txt", header=FALSE)
 impdataSubjectTrain <- read.table("./UCI HAR Dataset/train/subject_train.txt", header=FALSE)
-#names(impdataXTrain) <- impdataFeatures[,2]
 
 impdataXTest <- read.table("./UCI HAR Dataset/test/X_test.txt", header=FALSE)
 impdataYTest <- read.table("./UCI HAR Dataset/test/y_test.txt", header=FALSE)
 impdataSubjectTest <- read.table("./UCI HAR Dataset/test/subject_test.txt", header=FALSE)
-#names(impdataXTest) <- impdataFeatures[,2]
 
 
 #####
