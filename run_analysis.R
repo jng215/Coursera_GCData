@@ -82,7 +82,7 @@ names(dataMeanStd) <- gsub("Mag", "Magnitude", names(dataMeanStd))
 
 numVariables <- length(dataMeanStd)-3    # number of variables, deducted Subject, Activity, ActivityDesc
 dataAverages <- ddply(dataMeanStd, .(Subject, Activity), function(x) colMeans(x[, 1:numVariables]))     ###
-write.table(dataAverages, "tidyAverageData.txt")   
+write.table(dataAverages, "tidyAverageData.txt", row.name=FALSE)     
 
 
 
