@@ -1,5 +1,3 @@
-# Coursera_GCData
-
 Coursera - Getting and Cleaning Data - Course Project
 
 The purpose of this project is to demonstrate the processes to collect, work with, and clean a data set. 
@@ -18,7 +16,11 @@ After downloading and importing the source data, the R script run_analysis.R doe
 - Appropriately labels the data set with descriptive variable names. 
 - Creates an independent tidy data set with the average of each variable for each activity and each subject.
 
-The tidy data set, tidyAverageData.txt, and R script can be obtained in the Github repo link below:
+The tidy data set, tidyAverageData.txt, and the R script can be obtained in the Github repo link below:
 - https://github.com/jng215/Coursera_GCData
 
+There is a CodeBook.md file that describes the variables in the tidy data set.
+
 Thank you.
+
+
