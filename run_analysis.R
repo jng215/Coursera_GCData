@@ -28,7 +28,6 @@ impdataSubjectTest <- read.table("./UCI HAR Dataset/test/subject_test.txt", head
 #####
 # ----- 1. Merges the training and the test sets to create one data set.
 #
-
 dataX <- rbind(impdataXTrain,impdataXTest)  # merge data       
 names(dataX) <- impdataFeatures[,2]         # add variable (column) names
 
@@ -36,7 +35,6 @@ names(dataX) <- impdataFeatures[,2]         # add variable (column) names
 #####
 # ----- 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 #
-
 colNames <- filter(impdataFeatures,grepl("mean\\(\\)|std\\(\\)",V2))       # get column names
 dataMeanStd <- dataX[,colNames[,1]]              # create mean and standard deviation measurement dataset.
 
@@ -44,7 +42,6 @@ dataMeanStd <- dataX[,colNames[,1]]              # create mean and standard devi
 #####
 # ----- 3. Uses descriptive activity names to name the activities in the data set
 #
-
 # give imported data frames their variable names
 names(impdataActivityLabels) <- c('Activity','ActivityDesc');
 
@@ -62,7 +59,6 @@ dataMeanStd <- sqldf("SELECT * FROM dataMeanStd JOIN impdataActivityLabels USING
 #####
 # ----- 4. Appropriately labels the data set with descriptive variable names. 
 #
-
 names(dataMeanStd) <- gsub("\\()","", names(dataMeanStd))
 names(dataMeanStd) <- gsub("-mean","-Mean", names(dataMeanStd))
 names(dataMeanStd) <- gsub("-std","-StdDev", names(dataMeanStd))
@@ -74,7 +70,6 @@ names(dataMeanStd) <- gsub("Mag", "Magnitude", names(dataMeanStd))
 #####
 # ----- 5. From the data set in step 4, creates a second, independent tidy data set with 
 #          the average of each variable for each activity and each subject.
-
 numVariables <- length(dataMeanStd)-3    # number of variables, deducted Subject, Activity, ActivityDesc
 dataAverages <- ddply(dataMeanStd, .(Subject, Activity), function(x) colMeans(x[, 1:numVariables]))     ###
 write.table(dataAverages, "tidyAverageData.txt", row.name=FALSE)   
