@@ -1,4 +1,3 @@
-
 Coursera - Getting and Cleaning Data - Course Project
 
 The source data used by this project is the UCI HAR dataset with the URL link below:
@@ -86,4 +85,4 @@ The last step creates a data file called tidyAverageData.txt, which has the foll
  $ fBodyBodyGyroscopeMagnitude-StdDev
  $ fBodyBodyGyroscopeJerkMagnitude-Mean
  
- 
+
