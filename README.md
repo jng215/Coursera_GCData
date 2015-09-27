@@ -3,10 +3,10 @@ Coursera - Getting and Cleaning Data - Course Project
 The purpose of this project is to demonstrate the processes to collect, work with, and clean a data set. 
 The goal is to prepare tidy data that can be used for later analysis. 
 
-The source data used by this project is the UCI HAR dataset with the URL link below:
+Used by this project is the UCI HAR dataset downloaded from the the URL below:
 - https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-Futher information about the source data can be obtained in the URL below:
+Futher information about the source data can be obtained in this URL:
 - http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 After downloading and importing the source data, the R script run_analysis.R does the following:
@@ -19,8 +19,6 @@ After downloading and importing the source data, the R script run_analysis.R doe
 The tidy data set, tidyAverageData.txt, and the R script can be obtained in the Github repo link below:
 - https://github.com/jng215/Coursera_GCData
 
-There is a CodeBook.md file that describes the variables in the tidy data set.
+In the same Github line above, there is a CodeBook.md file that describes the variables in the tidy data set.
 
 Thank you.
-
-
